@@ -8,6 +8,14 @@ $(function () {
         slidesToShow: 5,
         arrows: false,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     })
 
     $('.main_customer .left_tab .tab_tit>li a').on('click', function (e) {
@@ -32,9 +40,15 @@ $(function () {
         } else {
             $('.to_top').removeClass('on')
         }
-    })
+    });
 
     $('.to_top').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 400);
+    });
+
+    //  responsive menu
+    $('.mopen').on('click', function () {
+        $('#gnb').toggleClass('on');
+        $(this).toggleClass('on');
     })
 })

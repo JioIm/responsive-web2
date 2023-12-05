@@ -25,6 +25,16 @@
     margin: 16px 0 0 0;
 }
 
+@media (max-width: 768px) {
+    .default .title h2 {
+        font-size: 5vw;
+    }
+
+    .default .title p {
+        font-size: 2.5vw;
+    }
+}
+
 .basic_btn {
     display: inline-block;
     border: 1px solid #008850;
